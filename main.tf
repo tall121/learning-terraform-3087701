@@ -48,8 +48,10 @@ module "blog_sg" {
   description = "Allow web traffic"
   vpc_id      = module.blog_vpc.vpc_id
   
-  ingress_cidr_blocks      = ["0.0.0.0/0"]
+  
   ingress_rules            = ["https-443-tcp","https-80-tcp"]
-  egress_cidr_blocks      = ["0.0.0.0/0"]
+  ingress_cidr_blocks      = ["0.0.0.0/0"]
+  
   egress_rules            = ["all-all"]
+  egress_cidr_blocks      = ["0.0.0.0/0"]
 }
