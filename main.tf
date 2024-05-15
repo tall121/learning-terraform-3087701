@@ -41,7 +41,7 @@ subnet_id=module.blog_vpc.public_subnets[0]
   }
 }
 
-module "blog_sg_sg" {
+module "blog_sg" {
   source = "terraform-aws-modules/security-group/aws"
 
   name        = "blog-service"
